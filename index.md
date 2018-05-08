@@ -25,11 +25,11 @@ We used the libomnistereo dataset of size 78GB that is created by the Autonomous
  ![alt text](Panoramic_view_left_0000005000.png)
  - **Right Unwarped Catadioptric image**
  ![alt text](Panoramic_view_right_0000005000.png)
- - **Disparity Map at t=0** 
+ - **Disparity Map for unwarped stereo pair at t=0** 
  ![alt text](disparity_map_0.png)
- - **Disparity Map at t=1**
+ - **Disparity Map for unwarped stereo pair at t=1**
  ![alt text](disparity_map_1.png)
- - **Optical Flow for the left unwarped catadioptric image**
+ - **Optical Flow for the left unwarped catadioptric image frames**
  ![alt text](optical_flow.png)
  - **Flow**
  ![alt text](scene_flow.png)
