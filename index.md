@@ -16,9 +16,9 @@ We propose a simple yet novel solution that finds scene flow using the following
 # Dataset
 We used the libomnistereo dataset of size 78GB that was created by the Autonomous Vision Group (part of the University of Tübingen and the MPI for Intelligent Systems). Below is the example of a pair of catadioptric stereo images from the dataset.
  - **Original Left Catadioptric Stereo Image**
- ![alt text](left_img_0000.png)
+ ![alt text](left_scene.png)
  - **Original Right Catadioptric Stereo Image**
- ![alt text](right_img_0000.png)
+ ![alt text](right_scene.png)
 
 # Results
  - **Left Unwarped Catadioptric image**
