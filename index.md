@@ -30,7 +30,7 @@ We used the libomnistereo dataset of size 78GB that was created by the Autonomou
  ![alt text](optical_flow.png)
  - **Flow**
  ![alt text](scene_flow.png)
- - **Comapring with Object Scene Flow detection algorithm:** Although OSF produced better results as compared to our simple scene flow detection techique, but it takes around 10 minutes to find the scene flow whereas our simple approach takes approximately 40 seconds. 
+ - **Comapring with existing scene flow detection algorithm (Object Scene Flow):** Although OSF produced better results as compared to our simple scene flow detection techique, but it takes around 10 minutes to find the scene flow whereas our simple approach takes approximately 40 seconds. 
  - **Interpretation of Results:** This simple approach shows that scene flow detection is possible on catadioptric images. However, our approach, involving unwarping the catadioptric images, leads to loss which doesn't provide results with high accuracy. In order to avoid this, we would need a novel scene flow algorithm that works directly on catadioptric images to detect scene flow.
  
 # Learning, Setbacks, and Future Work
