@@ -2,7 +2,7 @@
 Finding the scene flow i.e. the motion vectors along the x, y, z-axis for each pixel of omnidirectional catadioptric images. 
 
 # Importance
- - Catadioptric cameras are capable of providing a large field-of-view using an arrangement of a single lens and mirror(s). They have been shown to be used for recovering optimal 3D geometry, reflectance, texture etc. but have not been used for estimating 3D motion.<br />
+ - Catadioptric cameras are capable of providing a large field-of-view using an arrangement of a single lens and mirror(s). They have been shown to be used for recovering optimal 3D geometry, reflectance, texture etc. **but have not been used for estimating 3D motion till date**.<br />
  - Larger field-of-view  property of catadioptric cameras motivates their usage for 3D motion sensing with potential applications towards autonomous vehicles, VR etc. 
 
 # Introduction
