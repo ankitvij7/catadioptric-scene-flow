@@ -14,7 +14,7 @@ We propose a simple yet novel solution that finds scene flow using the following
  - **Combine depth estimation and optical flow to estimate scene flow:** Finally, in this step we combine the optical flow with the depth estimation and estimate the final scene flow.
 
 # Dataset
-We used the libomnistereo dataset of size 78GB that is created by the Autonomous Vision Group (part of the University of Tübingen and the MPI for Intelligent Systems). Below is the example of a pair of catadioptric stereo images from the dataset.
+We used the libomnistereo dataset of size 78GB that was created by the Autonomous Vision Group (part of the University of Tübingen and the MPI for Intelligent Systems). Below is the example of a pair of catadioptric stereo images from the dataset.
  - **Original Left Catadioptric Stereo Image**
  ![alt text](left_img_0000.png)
  - **Original Right Catadioptric Stereo Image**
