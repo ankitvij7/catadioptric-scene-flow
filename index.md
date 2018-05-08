@@ -47,9 +47,9 @@ We used the libomnistereo dataset of size 78GB that was created by the Autonomou
  
  ![alt text](scene_flow.png)
  - **Using existing scene flow detection algorithm (Object Scene Flow):** We supplied OSF with our rectified catadioptric images and wanted to know how well does existing scene flow algorithms work. We found that OSF produced better results as compared to our simple scene flow detection technique, however it takes around 10 minutes to find the scene flow whereas our simple approach takes approximately 40 seconds. This shows that although traditional scene flow detection algorithms work well on the unwarped images, they can't be extented to real time processing. 
- - **Interpretation of Results:** This simple approach shows that scene flow detection is possible on catadioptric images. However, our approach, involving unwarping the catadioptric images, leads to a loss which doesn't provide results with high accuracy. In order to avoid this, we would need a novel scene flow algorithm that works directly on catadioptric images to detect scene flow.
+ - **Interpretation of Results:** This simple approach shows that scene flow detection is possible on catadioptric images. However, our approach, involving unwarping the catadioptric images, leads to a loss which doesn't provide results with high accuracy. In order to avoid this, we would need to develop a novel scene flow algorithm that works directly on catadioptric images to detect scene flow.
  
-# Learning, Setbacks, and Future Work
- - **Learning:** We learned about the different types of catadioptric cameras and how do they operate, unwarping catadioptric images, optical flow and depth estimations using disparity maps, and how do existing scene flow algorithms work.
+# Learnings, Setbacks, and Future Work
+ - **Learnings:** We learned about the different types of catadioptric cameras, unwarping catadioptric images, optical flow and depth estimations using disparity maps, and how do existing scene flow algorithms work.
  - **Setbacks:** We tried generating synthetic catadioptric images using POV-Ray but we were unable to map the ray equations to display the omnidirectional view of the objects.
- - **Future Work:** In future, we plan to tweak parameters and enforce smoothness using regularization to obtain better disparity maps. Also, develop a scene flow algorithm that works without unwarping catadioptric images.
+ - **Future Work:** In the future, we plan to tweak parameters and enforce smoothness using regularization to obtain better disparity maps. Also, we want to develop a scene flow algorithm that works directly on catadioptric images without then need the unwarp.
