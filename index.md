@@ -2,7 +2,7 @@
 Finding the scene flow i.e. the motion vectors along the x, y, z-axis for each pixel of omnidirectional catadioptric images. 
 
 # Importance
- - Catadioptric cameras are capable of providing a large field-of-view using an arrangement of a single lens and mirror(s). They have been shown to be used for recovering optimal 3D geometry, reflectance, texture etc. <br />
+ - Catadioptric cameras are capable of providing a large field-of-view using an arrangement of a single lens and mirror(s). They have been shown to be used for recovering optimal 3D geometry, reflectance, texture etc. but have not been used for estimating 3D motion.<br />
  - Larger field-of-view  property of catadioptric cameras motivates their usage for 3D motion sensing with potential applications towards autonomous vehicles, VR etc. 
 
 # Introduction
@@ -12,11 +12,11 @@ Finding the scene flow i.e. the motion vectors along the x, y, z-axis for each p
  - **Scene Flow:** Scene flow captures the 3D motion field vectors of points in the real world just like optical flow captures the 2D motion field vectors.
 
 # Approach
-We propose a simple yet novel solution that finds scene flow using the following four steps:
- - **Rectify catadioptric images to match conventional camera images:** For this step we, first, find the area of interest in the catadioptric images and store the required image points in a lookup table for faster processing for other images in the dataset. Second, we calculate the height and width of the unwarped image. Finally, we reshape the lookup table points to the size of the unwarped image. The shaded region in the below image shows the area of interest - 
+We propose a simple yet novel solution that finds scene flow using the following steps:
+ - **Rectify catadioptric images to match conventional camera images:** For this step we, first, find the area of interest in the catadioptric images and store the required image points in a lookup table for faster processing for other images in the dataset. Second, we calculate the height and width of the unwarped image. Finally, we reshape the lookup table points to the size of the unwarped image. The shaded region in the image below shows the area of interest - 
  
     ![alt text](original_shaded_image.jpg)
- - **Detect optical flow:** In this step we find the motion vectors along the x and y-direction axis using Lucas-Kanade using two left stereo frames of unwarped catadioptric images.
+ - **Detect optical flow:** In this step we find the motion vectors along the x and y-direction using Lucas-Kanade using two left stereo frames of unwarped catadioptric images.
  - **Estimate depth using disparity maps on a stereo pair:** At this step, we are left with calculating the motion along the z-direction. For estimating this motion vector, we calculate the disparity maps using Semi-Global Block matching for a pair of unwarped catadioptric stereo images at time t=0 and t=1. The difference between these two disparity maps gives us the motion vector along the z-direction.
  - **Combine depth estimation and optical flow to estimate scene flow:** Finally, in this step, we combine the optical flow with the depth estimation and estimate the final scene flow.
  - **Testing on exisiting scene flow detection algorithms:** We also tested existing scene flow detection algorithm (object scene flow) with these unwarped images to determine how well they work. This also allows us to make use of the existing state-of-the-art scene flow detection algorithms that were designed for conventional stereo images.
@@ -46,7 +46,7 @@ We used the libomnistereo dataset of size 78GB that was created by the Autonomou
  - **Flow**
  
  ![alt text](scene_flow.png)
- - **Using existing scene flow detection algorithm (Object Scene Flow):** We supplied OSF with our rectified catadioptric images and wanted to know how well does existing scene flow algorithms work. We found that OSF produced better results as compared to our simple scene flow detection technique, however it takes around 10 minutes to find the scene flow whereas our simple approach takes approximately 40 seconds. This shows that although traditional scene flow detection algorithms work well on the unwarped images, then can't be extented to real time processing. 
+ - **Using existing scene flow detection algorithm (Object Scene Flow):** We supplied OSF with our rectified catadioptric images and wanted to know how well does existing scene flow algorithms work. We found that OSF produced better results as compared to our simple scene flow detection technique, however it takes around 10 minutes to find the scene flow whereas our simple approach takes approximately 40 seconds. This shows that although traditional scene flow detection algorithms work well on the unwarped images, they can't be extented to real time processing. 
  - **Interpretation of Results:** This simple approach shows that scene flow detection is possible on catadioptric images. However, our approach, involving unwarping the catadioptric images, leads to a loss which doesn't provide results with high accuracy. In order to avoid this, we would need a novel scene flow algorithm that works directly on catadioptric images to detect scene flow.
  
 # Learning, Setbacks, and Future Work
