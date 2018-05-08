@@ -1,9 +1,9 @@
 # Problem Statement
-Finding the scene flow i.e. the motion vectors along the x, y, z-axis for each pixel of the omnidirectional catadioptric image. 
+Finding the scene flow i.e. the motion vectors along the x, y, z-axis for each pixel of omnidirectional catadioptric images. 
 
 # Importance
-Catadioptric cameras are capable of providing a large field-of-view using an arrangement of a single lens and mirror(s). They have been shown to be used for recovering optimal 3D geometry, reflectance, texture etc. <br />
-Larger field-of-view  property of catadioptric cameras motivates their usage for 3D motion sensing with potential applications towards autonomous vehicles, VR etc. 
+ - Catadioptric cameras are capable of providing a large field-of-view using an arrangement of a single lens and mirror(s). They have been shown to be used for recovering optimal 3D geometry, reflectance, texture etc. <br />
+ - Larger field-of-view  property of catadioptric cameras motivates their usage for 3D motion sensing with potential applications towards autonomous vehicles, VR etc. 
 
 # Introduction
  - **Catadioptric Cameras:** Catadioptric cameras are cameras that combine mirror (usually curved) with conventional lens-based cameras to acquire wide fields-of-view. We have used a spherical mirror setup, as shown in the figure to the left, and its corresponding real-world captured image is shown in the right image.
