@@ -54,7 +54,7 @@ We used the libomnistereo dataset of size 78GB that was created by the Autonomou
  - **Setbacks:** We tried generating synthetic catadioptric images using POV-Ray [5] but we were unable to map the ray equations to display the omnidirectional view of the objects.
  - **Future Work:** In the future, we plan to tweak parameters and enforce smoothness using regularization to obtain better disparity maps. Also, we want to develop a scene flow algorithm that works directly on catadioptric images without then need the unwarp.
  
- # References
+# References
  [1] Gluckman, J. & Nayar, S.K. International Journal of Computer Vision (2001) 44: 65. https://doi.org/10.1023/A:1011172403203 <br />
  [2] Andrew Burton & John Radford (1978). Thinking in Perspective: Critical Essays in the Study of Thought Processes. Routledge. ISBN 0-416-85840-6. <br />
  [3] LIBOMNICAL: Omnidirectional Camera Calibration. http://www.cvlibs.net/projects/omnicam/ <br />
