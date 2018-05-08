@@ -18,6 +18,7 @@ We propose a simple yet novel solution that finds scene flow using the following
  - **Detect optical flow:** In this step we find the motion vectors along the x and y-direction axis using Lucas-Kanade using two left stereo frames of unwarped catadioptric images.
  - **Estimate depth using disparity maps on a stereo pair:** At this step, we are left with calculating the motion along the z-direction. For estimating this motion vector, we calculate the disparity maps using Semi-Global Block matching for a pair of unwarped catadioptric stereo images at time t=0 and t=1. The difference between these two disparity maps gives us the motion vector along the z-direction.
  - **Combine depth estimation and optical flow to estimate scene flow:** Finally, in this step, we combine the optical flow with the depth estimation and estimate the final scene flow.
+ - **Testing on exisiting scene flow detection algorithms:** We also tested existing scene flow detection algorithm (object scene flow) with these unwarped images to determine how well they work. This also allows us to make use of the existing state-of-the-art scene flow detection algorithms that were designed for conventional stereo images.
 
 # Dataset
 We used the libomnistereo dataset of size 78GB that was created by the Autonomous Vision Group (part of the University of Tübingen and the MPI for Intelligent Systems). Below is the example of a pair of catadioptric stereo images from the dataset.
@@ -44,7 +45,7 @@ We used the libomnistereo dataset of size 78GB that was created by the Autonomou
  - **Flow**
  
  ![alt text](scene_flow.png)
- - **Comparing with existing scene flow detection algorithm (Object Scene Flow):** Although OSF produced better results as compared to our simple scene flow detection technique, it takes around 10 minutes to find the scene flow whereas our simple approach takes approximately 40 seconds. 
+ - **Using existing scene flow detection algorithm (Object Scene Flow):** We supplied OSF with our rectified catadioptric images and wanted to know how well does existing scene flow algorithms work. We found that OSF produced better results as compared to our simple scene flow detection technique, however it takes around 10 minutes to find the scene flow whereas our simple approach takes approximately 40 seconds. This shows that although traditional scene flow detection algorithms work well on the unwarped images, then can't be extented to real time processing. 
  - **Interpretation of Results:** This simple approach shows that scene flow detection is possible on catadioptric images. However, our approach, involving unwarping the catadioptric images, leads to a loss which doesn't provide results with high accuracy. In order to avoid this, we would need a novel scene flow algorithm that works directly on catadioptric images to detect scene flow.
  
 # Learning, Setbacks, and Future Work
