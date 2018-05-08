@@ -7,6 +7,8 @@ Catadioptric cameras are capable of providing a large field-of-view using a sing
 # Approach
 We propose a simple yet novel solution that finds scene flow using the following four steps:
  - **Rectify catadioptric images to match conventional camera images:** For this step we, first, find the area of interest in the catadioptric images and store the required image points in a lookup table for faster processing for other images in the dataset. Second, we calculate the height and width of the unwarped image. Finally, we reshape the lookup table points to the size of the unwarped image. The shaded region in the below image shows the area of interest - 
+ <img align="left" src="original-image.png" title="Angular" hspace="20"/>
+ <img align="right" src="image-region-selection.png" title="Angular" hspace="20"/>
  ![alt-text-1](original-image.png) ![alt-text-2](image-region-selection.png)
  - **Detect optical flow:** In this step we find the motion vectors along the x and y direction axis using Lucas-Kanade using two left stereo frames of unwarped catadioptric images.
  - **Estimate depth using disparity maps on stereo pair:** At this step, we are left with calculating the motion along the z direction. For estimating this motion vector, we calculate the disparity maps using Semi Global Block matching for a pair of unwarped catadioptric stereo images at time t=0 and t=1. The difference of these two disparity maps gives us the motion vector along the z-direction.
