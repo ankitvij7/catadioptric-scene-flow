@@ -5,7 +5,7 @@ Finding the scene flow i.e. the motion vectors along the x, y, z-axis for each p
 Catadioptric cameras are capable of providing a large field-of-view using a single lens and mirrors and have been shown to be used for recovering optimal 3D geometry, reflectance, texture etc. Larger field-of-view  property of catadioptric cameras motivates their usage for 3D motion sensing with potential applications towards autonomous vehicles, VR etc. 
 
 # Introduction
- - **Catadioptric Cameras:** Catadioptric cameras are cameras that combine mirror (usually curved) with conventional lens-based cameras to acquire wide fields-of-view. We have used a spherical mirrow setup, as shown in the figure to the left, and its corresponding real-world captured image is shown in the right image.
+ - **Catadioptric Cameras:** Catadioptric cameras are cameras that combine mirror (usually curved) with conventional lens-based cameras to acquire wide fields-of-view. We have used a spherical mirror setup, as shown in the figure to the left, and its corresponding real-world captured image is shown in the right image.
  
    ![alt text](intro_catadioptric.jpg)
  - **Scene Flow:** Scene flow captures the 3D motion field vectors of points in the real world just like optical flow captures the 2D motion field vectors.
